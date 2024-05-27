@@ -5,7 +5,6 @@ import pymysql
 
 
 class web_inteface():
-
 	"""Класс интерфейса"""
 	def __init__(self):
 		self.con()
