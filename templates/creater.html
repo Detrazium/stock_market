@@ -1,0 +1,75 @@
+{% extends 'base.html' %}
+
+{% block title %}{% endblock %}
+
+{% block content %}
+    <div class="md_corser">
+        <div id="md_corser_intarface"><h1>Интерфейс</h1></div>
+        <div class="md_core_post">
+            <div class="md_core create-works cont_list">
+                <h2>Создание задачи</h2>
+                <div class="container-card">
+                    <div class="card_inp">
+                        <form action="/tasks" method="post">
+                            <label><h4>ЗАГЛАВИЕ</h4></label>
+                            <input type="text" name='input_title' placeholder="Заглавие" class="md_core_inputer title" minlength="3" maxlength="100" size="30"/>
+                            <h4>ОПИСАНИЕ</h4>
+                            <input type="text" name='input_desc' placeholder="Описание" class="md_core_inputer description" minlength="3" maxlength="100" size="30"/>
+                            <label><h4>Нажмите после ввода:</h4></label>
+                            <button type="submit"><h3 class="card_inp create--descript">Создать задачу</h3></button>
+                        </form>
+                    </div>
+                </div>
+                <div class="container-card tables">
+                    <p>ANSWER</p>
+                    <p>TABLE</p>
+                </div>
+            </div>
+            <div class="md_core cont_list">
+                <h2>Получить список</h2>
+                <div class="container-card">
+                    <div class="card_inp">
+                        <form action="/tasks" method="get">
+                            <button type="submit"><h3 class="card_inp">Список всех задач</h3></button>
+                        </form>
+                    </div>
+                </div>
+                <div class="container-card tables">
+                    <p>ANSWER</p>
+                    <p>TABLE</p>
+                </div>
+            </div>
+            <div class="md_core cont_list">
+                <h2>О задаче</h2>
+                <div class="container-card">
+                    <div class="card_inp">
+                        <form action="/tasks" method="get">
+                            <input type="text" name='input_id_info' placeholder="ID" class="md_core_inputer title" minlength="3" maxlength="100" size="30"/>
+                            <button type="submit"><h3 class="card_inp">Получить информацию</h3></button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="md_core cont_list">
+                <h2>Обновление задачи</h2>
+                <div class="card_inp">
+                    <form action="/tasks" method="put">
+                        <input type="text" name='input_id_info' placeholder="ID" class="md_core_inputer title" minlength="3" maxlength="100" size="30"/>
+                        <input type="text" name='input_answer_title' placeholder="title" class="md_core_inputer title" minlength="3" maxlength="100" size="30"/>
+                        <input type="text" name='input_answer_description' placeholder="description" class="md_core_inputer title" minlength="3" maxlength="100" size="30"/>
+                        <button type="submit"><h3 class="card_inp">Обновить</h3></button>
+                    </form>
+                </div>
+            </div>
+            <div class="md_core cont_list">
+                <h2>Удалить задачу</h2>
+                <div class="card_inp">
+                    <form action="/tasks" method="delete">
+                        <input type="text" name='input_id_info' placeholder="ID" class="md_core_inputer title" minlength="3" maxlength="100" size="30"/>
+                        <button type="submit"><h3 class="card_inp">Удалить</h3></button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
