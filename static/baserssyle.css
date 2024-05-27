@@ -1,0 +1,25 @@
+.md_core {
+    margin: 50px;
+    padding: 30px;
+    background: #aed1c7;
+    border-radius:50px
+}
+
+.cont_list{
+    display: flex;
+    flex-direction: row;
+.container-card {
+    margin: 50px;
+    background: red;
+    display:flex;
+    padding: 10px
+}
+.card_inp {
+    padding:10px;
+    display:flex;
+    flex-direction:column;
+    padding:10px
+}
+
+
+
